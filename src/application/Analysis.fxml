@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #020612#020612;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AnalysisController">
+   <children>
+      <Pane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #020612#020612 #020612#020612;" />
+      <LineChart fx:id="lineChart" layoutX="194.0" layoutY="88.0" legendVisible="false" prefHeight="305.0" prefWidth="866.0" stylesheets="@application.css">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" tickLabelFill="WHITE" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" side="LEFT" tickLabelFill="WHITE" />
+        </yAxis>
+      </LineChart>
+      <VBox prefHeight="720.0" prefWidth="194.0" style="-fx-background-color: #f54b42;">
+         <children>
+            <JFXButton onAction="#switchToSelectPage" prefHeight="88.0" prefWidth="194.0" stylesheets="@application.css" text="My Fitness Diary" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="21.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" onAction="#switchToExercise" prefHeight="70.0" prefWidth="194.0" stylesheets="@application.css" text="Exercises" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="21.0" />
+               </font></JFXButton>
+            <JFXButton alignment="CENTER" prefHeight="70.0" prefWidth="194.0" styleClass="buttonPage" stylesheets="@application.css" text="Analysis" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="21.0" />
+               </font></JFXButton>
+            <JFXButton alignment="CENTER" onAction="#switchToSummary" prefHeight="70.0" prefWidth="194.0" stylesheets="@application.css" text="Body Data" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="21.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="247.0" layoutY="400.0" prefHeight="306.0" prefWidth="274.0">
+         <children>
+            <Label fx:id="maxL" alignment="CENTER" prefHeight="76.0" prefWidth="281.0" text="Max Weight" textFill="#f54b42">
+               <font>
+                  <Font name="Hiragino Sans W1" size="35.0" />
+               </font>
+            </Label>
+            <Label fx:id="maxWeight" alignment="CENTER" prefHeight="219.0" prefWidth="289.0" style="-fx-background-color: #242424#242424; -fx-background-radius: 20; -fx-border-radius: 20;" textFill="#f54b42">
+               <font>
+                  <Font name="Hiragino Sans W1" size="55.0" />
+               </font>
+            </Label>
+         </children></VBox>
+      <JFXButton alignment="CENTER" layoutY="650.0" onAction="#switchToLoginPage" prefHeight="70.0" prefWidth="194.0" stylesheets="@application.css" text="Log out" textFill="WHITE">
+         <font>
+            <Font name="Hiragino Sans W1" size="21.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="weightB" layoutX="553.0" layoutY="50.0" onAction="#showWL" prefHeight="30.0" prefWidth="90.0" style="-fx-border-color: #f54b42 #f54b42; -fx-background-color: transparent;" text="Weight" textFill="WHITE">
+         <font>
+            <Font name="Hiragino Sans W1" size="16.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="repB" layoutX="643.0" layoutY="50.0" onAction="#showWL" prefHeight="30.0" prefWidth="90.0" style="-fx-border-color: #f54b42 #f54b42; -fx-background-color: transparent;" text="Rep" textFill="WHITE">
+         <font>
+            <Font name="Hiragino Sans W1" size="16.0" />
+         </font>
+      </JFXButton>
+      <ComboBox fx:id="exerciseCombo" layoutX="237.0" layoutY="51.0" onAction="#changeBtnText" prefHeight="26.0" prefWidth="198.0" promptText="Exercise" styleClass="combo-box" stylesheets="@application.css" />
+      <Label fx:id="userL" layoutX="471.0" layoutY="42.0" prefHeight="17.0" prefWidth="59.0" textFill="#f7f7f7" />
+      <PieChart fx:id="pieChart" labelsVisible="false" layoutX="582.0" layoutY="439.0" legendSide="RIGHT" prefHeight="272.0" prefWidth="461.0" style="-fx-background-color: #242424#242424; -fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@application.css" />
+      <JFXButton fx:id="pieBtn" alignment="BOTTOM_CENTER" layoutX="684.0" layoutY="365.0" onAction="#showPie" prefHeight="61.0" prefWidth="274.0" styleClass="button6" stylesheets="@application.css" text="Show Pie Chart" textFill="#f54b42">
+         <font>
+            <Font name="Hiragino Sans W1" size="31.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

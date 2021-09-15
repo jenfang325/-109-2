@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SummaryController">
+   <children>
+      <VBox prefHeight="720.0" prefWidth="194.0" style="-fx-background-color: #f54b42;">
+         <children>
+            <JFXButton onAction="#switchToSelectPage" prefHeight="88.0" prefWidth="194.0" stylesheets="@application.css" text="My Fitness Diary" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#switchToExercise" prefHeight="70.0" prefWidth="194.0" stylesheets="@application.css" text="Exercises" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="21.0" />
+               </font></JFXButton>
+            <JFXButton onAction="#switchToAnalysis" prefHeight="70.0" prefWidth="194.0" stylesheets="@application.css" text="Analysis" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="21.0" />
+               </font></JFXButton>
+            <JFXButton prefHeight="70.0" prefWidth="194.0" styleClass="buttonPage" stylesheets="@application.css" text="Body Data" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="21.0" />
+               </font></JFXButton>
+         </children>
+      </VBox>
+      <JFXButton layoutY="650.0" onAction="#switchToLoginPage" prefHeight="70.0" prefWidth="194.0" stylesheets="@application.css" text="Log out" textFill="WHITE">
+         <font>
+            <Font name="Hiragino Sans W1" size="21.0" />
+         </font></JFXButton>
+      <Pane layoutX="194.0" prefHeight="720.0" prefWidth="886.0" style="-fx-background-color: #020612#020612;">
+         <children>
+            <Label fx:id="userL" layoutX="36.0" layoutY="14.0" prefHeight="53.0" prefWidth="545.0" textFill="#899de2">
+               <font>
+                  <Font name="Hiragino Sans W1" size="38.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="50.0" layoutY="170.0" text="Weight (kg)" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="50.0" layoutY="220.0" text="Skeletal Muscle Mass (kg)" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="50.0" layoutY="270.0" text="Body Fat Mass (kg)" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="511.0" layoutY="120.0" text="BMI" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="16.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="511.0" layoutY="170.0" text="Body Fat Percentage" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="weight" layoutX="260.0" layoutY="170.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text3" stylesheets="@application.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="smm" layoutX="260.0" layoutY="220.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text3" stylesheets="@application.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bfm" layoutX="260.0" layoutY="270.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text3" stylesheets="@application.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bmi" layoutX="690.0" layoutY="120.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text3" stylesheets="@application.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="bfp" layoutX="690.0" layoutY="170.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text3" stylesheets="@application.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <JFXButton layoutX="511.0" layoutY="286.0" onAction="#confirm" prefHeight="42.0" prefWidth="359.0" style="-fx-background-color: #f54b42 #f54b42;" text="Confirm" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="25.0" />
+               </font>
+            </JFXButton>
+            <DatePicker fx:id="date" layoutX="657.0" layoutY="48.0" prefHeight="30.0" prefWidth="227.0" promptText="YYYY-MM-DD" stylesheets="@application.css">
+               <styleClass>
+                  <String fx:value="date-picker" />
+                  <String fx:value="date-picker-popup" />
+               </styleClass></DatePicker>
+            <LineChart fx:id="lineChart" layoutX="5.0" layoutY="380.0" legendVisible="false" prefHeight="317.0" prefWidth="478.0" stylesheets="@application.css">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" side="LEFT" />
+              </yAxis>
+               <styleClass>
+                  <String fx:value="axis" />
+                  <String fx:value="axis-label" />
+               </styleClass>
+            </LineChart>
+            <JFXComboBox fx:id="infoCombo" focusColor="WHITE" layoutX="50.0" layoutY="350.0" onAction="#showL" prefHeight="26.0" prefWidth="161.0" style="-fx-background-color: #34495e#34495e;" styleClass="combo-box" stylesheets="@application.css" unFocusColor="#b0a9a9" />
+            <Pane layoutX="511.0" layoutY="433.0" prefHeight="220.0" prefWidth="354.0" style="-fx-background-color: #242424#242424; -fx-background-radius: 20;">
+               <children>
+                  <Label fx:id="change" alignment="CENTER" layoutX="22.0" layoutY="17.0" prefHeight="192.0" prefWidth="313.0" textAlignment="CENTER" textFill="#f54b42">
+                     <font>
+                        <Font name="Hiragino Sans W1" size="50.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Label alignment="CENTER" layoutX="50.0" layoutY="120.0" text="Height (cm)" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="height" layoutX="260.0" layoutY="120.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text3" stylesheets="@application.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="511.0" layoutY="220.0" text="BMR (kcal)" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bmr" layoutX="690.0" layoutY="220.0" style="-fx-background-color: transparent; -fx-border-color: white; -fx-border-width: 0px 0px 2px 0px;" styleClass="text3" stylesheets="@application.css">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="516.0" layoutY="390.0" prefHeight="30.0" prefWidth="354.0" text="Change From The Beginning" textFill="#f54b42">
+               <font>
+                  <Font name="Hiragino Sans W1" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="wrongInput" alignment="CENTER" layoutX="557.0" layoutY="262.0" prefHeight="17.0" prefWidth="291.0" textFill="RED">
+               <font>
+                  <Font name="Hiragino Sans W1" size="16.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </children>
+</AnchorPane>
