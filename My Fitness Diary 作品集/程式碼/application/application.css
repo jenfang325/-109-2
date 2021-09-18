@@ -1,0 +1,227 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-image:url("/p3.jpg");
+	-fx-background-size:cover ;
+}
+.root2{
+	-fx-background-image:url("/background.png");
+	-fx-background-size:cover ;
+}
+.white{
+	-fx-background-color:white;
+}
+.combo-box{
+	-fx-background-color:#34495e;
+}
+.combo-box .arrow {
+    -fx-background-color:white ;
+}
+.combo-box-popup .list-view .list-cell{
+	-fx-background-color:#34495e;
+	-fx-text-fill:white ;
+}
+.combo-box .list-cell{
+	-fx-text-fill:white ;
+}
+ .buttonPage{
+	/*-fx-effect:dropshadow( two-pass-box , #363636 , 0.5 , 0.9 , 0px , 3px );
+	-fx-background-color:#f0928d;*/
+	-fx-border-width:0.0px 0.0px 0px 3px;
+	-fx-border-color:white;
+	-fx-background-color:#e63b32;
+}
+.buttonPage2{
+	/*-fx-effect:dropshadow( two-pass-box , #363636 , 0.5 , 0.9 , 0px , 3px );
+	-fx-background-color:#f0928d;*/
+	-fx-border-width:0.0px 0.0px 3px px;
+	-fx-border-color:white;
+	-fx-background-color:#e63b32;
+}
+.button:hover{
+	-fx-background-color:#e63b32;
+	-fx-border-color:white;
+	-fx-border-width:0px 0px 0.0px 3px;
+	
+}
+.button2:hover{
+	-fx-background-color:#e63b32;
+	-fx-border-color:white;
+	-fx-border-width:0px 0px 3px 0px;
+}
+.button3:hover{
+	-fx-border-color:#899de2;
+	-fx-border-width:0px 0px 3px 0px;
+}
+.button4:hover{
+	-fx-border-color:white;
+	-fx-border-width:3px 3px 3px 3px;
+	
+}
+.button5:hover{
+	-fx-border-color:transparent;
+}
+
+.button6:hover{
+	-fx-background-color:transparent;
+	-fx-border-color:#d16969;
+	-fx-border-width:0px 0px 3px 0px;
+}
+
+.button4{
+	-fx-font-size:18;
+	
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color:transparent;
+}
+
+.scroll-pane > .corner {
+    -fx-background-color: #050c26;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: white;
+    -fx-background-radius: 5em;
+}
+.scroll-bar2:horizontal .track,
+.scroll-bar2:vertical .track {
+    -fx-background-color:  #020612;
+    -fx-background-radius: 5em;
+}
+.scroll-bar2:horizontal .thumb,
+.scroll-bar2:vertical .thumb {
+    -fx-background-color: #020612;
+    -fx-background-radius: 5em;
+}
+.axis-label{
+	-fx-text-fill:orange;
+}
+
+.axis{
+	-fx-tick-label-fill:#00fffb;
+}
+
+.text2{
+	 -fx-text-fill:white;
+	 -fx-font-size:18;
+}
+.text3{
+	-fx-text-fill:white;
+}
+
+/* .data0.chart-pie { -fx-pie-color: #BDC6D9; }
+.data1.chart-pie { -fx-pie-color: #52688F; }
+.data2.chart-pie { -fx-pie-color: #E3E7F1; }
+.data3.chart-pie { -fx-pie-color: #7391C8; }
+.data4.chart-pie { -fx-pie-color: #41729F; }
+.data5.chart-pie { -fx-pie-color: #5885AF; }
+.data6.chart-pie { -fx-pie-color: #274472; }
+.data7.chart-pie { -fx-pie-color: #C3E0E5; }
+.data8.chart-pie { -fx-pie-color: #BFD7ED; }
+.data9.chart-pie { -fx-pie-color: #60A3D9; }
+.data10.chart-pie { -fx-pie-color: #0074B7; }
+.data11.chart-pie { -fx-pie-color: #003B73; }
+.data15.chart-pie { -fx-pie-color: turquoise; }
+.data11.chart-pie { -fx-pie-color: aquamarine; }
+.data12.chart-pie { -fx-pie-color: cornflowerblue; }
+.data13.chart-pie { -fx-pie-color: blue; }
+.data14.chart-pie { -fx-pie-color: cadetblue; }*/
+
+.text-area .content {
+ -fx-background-color: transparent ;
+}
+
+.date-picker .combo-box {
+-fx-background-insets:0px ;
+-fx-border-width: 0px;
+  }
+
+.date-picker .text-field{
+-fx-background-radius:0px ;
+-fx-border-color: black;
+-fx-text-fill:white;
+-fx-background-color:transparent;
+-fx-border-color:white;
+-fx-border-width:0px 0px 2px 0px;
+}
+
+.date-picker .arrow-button{
+-fx-background-radius:0px ;
+-fx-background-color: #232323;
+}
+
+.date-picker .arrow-button .arrow{
+-fx-background-radius:0px ;
+-fx-background-color: #1783CC;
+}
+
+.date-picker .arrow-button:hover .arrow{
+-fx-background-radius:0px ;
+-fx-background-color: #40a9ef;
+ }
+
+ .date-picker .button {
+-fx-background-color: transparent;
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+ }
+
+ .date-picker .button:hover {
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+ }
+
+.date-picker .button .arrow:pressed {
+-fx-border-color:transparent;
+-fx-pref-height: 35px;
+-fx-pref-width: 35px;
+ }
+
+ .date-picker .cell {
+-fx-background-color: #232323;
+-fx-pref-width:24px ;
+-fx-pref-height:30px ;
+-fx-text-fill:white;
+-fx-font-size:12;
+ }
+
+.date-picker .cell:hover {
+-fx-background-color: #1783CC;
+-fx-pref-width:24px ;
+-fx-pref-height:30px ;
+}
+
+.date-picker .cell:focused {
+-fx-background-color:#11659e;
+-fx-pref-width:24px ;
+-fx-pref-height:30px ;
+ }
+
+.date-picker-popup  {
+-fx-background-color: black;
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+

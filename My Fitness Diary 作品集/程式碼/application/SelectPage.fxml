@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SelectPageController">
+   <children>
+      <Pane prefHeight="59.0" prefWidth="1080.0" style="-fx-background-color: #f54b42 ;">
+         <children>
+            <JFXButton alignment="CENTER" layoutX="649.0" onAction="#switchToExercise" prefHeight="59.0" prefWidth="115.0" styleClass="button2" stylesheets="@application.css" text="Exercises" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutX="761.0" onAction="#switchToAnalysis" prefHeight="59.0" prefWidth="103.0" styleClass="button2" stylesheets="@application.css" text="Analysis" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutX="863.0" onAction="#switchToSummary" prefHeight="59.0" prefWidth="120.0" styleClass="button2" stylesheets="@application.css" text="Body Data" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" layoutX="981.0" onAction="#switchToLoginPage" prefHeight="59.0" prefWidth="99.0" styleClass="button2" stylesheets="@application.css" text="Log Out" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton alignment="CENTER" prefHeight="59.0" prefWidth="285.0" style="-fx-border-width: 0px 0px 3px 0px; -fx-border-color: white;" styleClass="button2" stylesheets="@application.css" text="My Fitness Diary" textFill="WHITE">
+               <font>
+                  <Font name="Hiragino Sans W1" size="26.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <ScrollPane hbarPolicy="NEVER" layoutY="59.0" prefHeight="661.0" prefWidth="1080.0" stylesheets="@application.css" vbarPolicy="NEVER">
+         <content>
+            <Pane prefHeight="2528.0" prefWidth="1080.0" style="-fx-background-color: #020612#020612;">
+               <children>
+                  <Label fx:id="userL" layoutX="433.0" layoutY="30.0" prefHeight="17.0" prefWidth="54.0" textFill="WHITE" />
+                  <ImageView fx:id="background" fitHeight="2694.0" fitWidth="1126.0" layoutX="-10.0" layoutY="-150.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../Image/好了1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </content>
+         <styleClass>
+            <String fx:value="scroll-pane" />
+            <String fx:value="scroll-bar2" />
+         </styleClass>
+      </ScrollPane>
+   </children>
+</AnchorPane>
